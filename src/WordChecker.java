@@ -8,11 +8,11 @@ public class WordChecker {
     public boolean WordChecker(String text) {
         String[] words = text.split("\\P{IsAlphabetic}+");
         list = Arrays.asList(words);
-        return hasWord();
+        return hasWord(Main.word);
     }
 
-    public boolean hasWord() {
-        if (list.contains(Main.word)) {
+    public boolean hasWord(String searchWord) {
+        if (list.contains(searchWord)) {
             return true;
         }
         return false;
